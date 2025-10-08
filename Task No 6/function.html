@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+function calculateFactorialAndSquare(n) {
+    let factorial = 1;
+    for (let i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+    let square = n * n;
+
+    console.log("Factorial:", factorial);
+    console.log("Square:", square);
+}
+
+calculateFactorialAndSquare(5);
+</script>
+
+</body>
+</html>

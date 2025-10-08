@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background: #f9f9f9;
+}
+.Main {
+    text-align: center;
+    
+
+}
+ h1{
+    font-size:36pt;
+    font-weight: bold;
+    margin: 0;
+}
+p{
+    font-size: 11pt;
+    margin: 0;
+    margin-bottom: 35px;
+}
+.underline {
+  border-bottom: 2px solid black; 
+  width: 34.5%;
+  margin: auto;
+}
+table{
+    margin-left: 474px;
+}
+
+table th, table td {
+    padding: 10px;
+    vertical-align: top;
+} 
+table th{
+    font-weight: bold;
+    font-size: 16px;
+    text-align:left;
+    width: 120px;
+}
+table td{
+    font-size: 15px;
+}
+ul{
+    margin: 0;
+    padding-left: 16px;
+}
