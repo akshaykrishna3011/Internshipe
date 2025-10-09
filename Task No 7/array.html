@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays and Array Methods</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods Example</title>
 </head>
 <body>
-    
-    
+  <script>
+    let myArray = [1, 10, 15, 25, 30];
+    console.log("Start:", myArray);
+
+    myArray[0] = 30;
+    console.log("Change first element:", myArray);
+
+    myArray.push(22);
+    console.log("After push(22):", myArray);
+
+    myArray.pop();
+    console.log("After pop():", myArray);
+
+    myArray.unshift(44);
+    console.log("After unshift(44):", myArray);
+
+    myArray.shift();
+    console.log("After shift():", myArray);
+
+    myArray.sort();
+    console.log("After sort():", myArray);
+
+    myArray.reverse();
+    console.log("After reverse():", myArray);
+  </script>
 </body>
 </html>
