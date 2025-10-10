@@ -1,17 +1,42 @@
+// index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// 1. Simple JSX element
+const heading = <h1>Hello, JSX!</h1>;
+
+// 2. JSX element with dynamic content
+const name = "Akku";
+const greeting = <p>Welcome, {name}!</p>;
+
+// 3. JSX element with attributes and styles
+const styledDiv = (
+  <div style={{ color: 'white', backgroundColor: 'teal', padding: '10px' }}>
+    This is a styled JSX div
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// 4. JSX element with a list
+const fruits = ['Apple', 'Banana', 'Cherry'];
+const fruitList = (
+  <ul>
+    {fruits.map((fruit, index) => (
+      <li key={index}>{fruit}</li>
+    ))}
+  </ul>
+);
+
+// 5. Nested JSX elements
+const app = (
+  <div>
+    {heading}
+    {greeting}
+    {styledDiv}
+    {fruitList}
+  </div>
+);
+
+// Render JSX to the DOM
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(app);
