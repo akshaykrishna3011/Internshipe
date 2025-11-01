@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h2>Find least repeating element in an array</h2>
+
+    <script>
+      var arr = [1, 4, 2, 1, 5, 2, 3, 1, 5, 2, 4];
+
+      var objArr = [];
+
+      for (let num of arr) {
+        let index = objArr.findIndex((val) => val.num === num);
+
+        if (index === -1) {
+          objArr.push({ num: num, count: 1 });
+        } else {
+          objArr[index].count += 1;
+        }
+      }
+
+      objArr.sort((a, b) => a.count - b.count);
+
+      console.log("All elements with count:", objArr);
+
+      let minCount = objArr[0].count;
+
+      let leastRepeating = objArr
+        .filter((item) => item.count === minCount)
+        .map((item) => item.num);
+      document.write("Original array :", arr, "<br>");
+      document.write("Least Repeating Element:", leastRepeating);
+    </script>
+
+    <h2>Write a program to reverse an array</h2>
+
+    <script>
+      function reverseArray(array) {
+        let reversed = [];
+
+        for (let i = array.length - 1; i >= 0; i--) {
+          reversed.push(array[i]);
+        }
+
+        return reversed;
+      }
+
+      let array = [1, 2, 3, 4, 5];
+      document.write("Original Array:", array, "<br>");
+      document.write("Reversed Array:", reverseArray(array));
+    </script>
+
+    <h2>Find first repeating element in an array</h2>
+    <script>
+      function findFirstRepeating(numb) {
+        let rep = new Set();
+
+        for (let num of numb) {
+          if (rep.has(num)) {
+            return num;
+          }
+          rep.add(num);
+        }
+      }
+
+      let numb = [2, 4, 3, 5, 1, 3, 2];
+      document.write("Original array :", numb, "<br>");
+      document.write("First Repeating Element:", findFirstRepeating(numb));
+    </script>
+
+    <h2>Find duplicates in an array</h2>
+
+    <script>
+  let a = [2, 4, 3, 5, 1, 3, 2];
+  let seen = new Set();
+  let duplicates = new Set();
+
+  for (let num of a) {
+    if (seen.has(num)) {
+      duplicates.add(num);
+    } else {
+      seen.add(num);
+    }
+  }
+
+  document.write("Original array: " + a + "<br>");
+  document.write("Duplicate numbers: " + Array.from(duplicates));
+</script>
+
+  </body>
+</html>
