@@ -78,10 +78,8 @@ body{
   padding-left: 30px;
   font-family: Madefor, "Helvetica Neue", Helvetica, Arial;
   margin: 0;
-  transition: .2s;
-  opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: 1s;
+ 
+  
 }
 .paragraph p{
   font-size: 24px;
@@ -89,18 +87,13 @@ body{
   padding-left: 32px;
   color:#16163f;
   margin: 0;
-  transition: .2s;
-  opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay:1s;
+ 
+
 }
 .button{
   padding-left: 33px;
   padding-top: 37px;
   transition: .2s;
-  opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay:1s;
 }
 .button button{
   background-color: #9e3ffd;
@@ -122,19 +115,14 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-   opacity: 0;
-  animation: slidetop 2s ease forwards;
-  animation-delay:.2s;
-  
+ 
 }
 .sub-heading{
   font-size: 36px;
   margin: auto;
   width: 480px;
   font-weight: bolder;
-   opacity: 0;
-  animation: slidetop 2.5s ease forwards;
-  animation-delay:.2s;
+
 }
 .card-title{
   font-size: 16px;
@@ -155,9 +143,6 @@ line-height: 1.5em;
   border: none;
   display: inline-block;
    transition: .2s;
-  opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
 }
 
 
@@ -187,10 +172,7 @@ line-height: 1.5em;
   color:#fff;
   font-family:"Work Sans", sans-serif;
   font-weight: 600;
-   transition: .2s;
-  opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+  
 
 }
 .number h1{
@@ -199,10 +181,7 @@ line-height: 1.5em;
   font-weight: 600;
   font-family:"Work Sans", sans-serif;
   margin: 0;
-   transition: .2s;
-   opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+ 
 
   
 }
@@ -210,17 +189,13 @@ line-height: 1.5em;
   font-size: 18px;
   color: #fff;
   line-height: 1rem;
-   transition: .2s;
-   opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+  
 }
 .dot{
   color: #fff;
    transition: .2s;
    opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+ 
 }
 .cutome-col{
   width: 200px;
@@ -244,26 +219,18 @@ line-height: 1.5em;
 
 .left-heading {
   width: 60px;
-   transition: .2s;
-   opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+  
 }
 
 .left-subheading {
   width: 450px;
-   transition: .2s;
-   opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+  
+   
 }
 
 .text-secondary {
   width: 590px;
-   transition: .2s;
-   opacity: 0;
-  animation: slidetop 1s ease forwards;
-  animation-delay: calc(.3s*var(--i));
+ 
 }
 
 .four h1 {
@@ -445,7 +412,7 @@ line-height: 1.5em;
   border: none;
   filter: grayscale(100%);
 }
-/* ✅ Responsive fixes */
+
 @media (max-width: 992px) {
   .heading h1 {
     font-size: 60px;
@@ -465,7 +432,7 @@ line-height: 1.5em;
   }
 
   .hero::before {
-    background-size: cover; /* Better fit on tablets */
+    background-size: cover; 
     height: 100%;
   }
 }
@@ -477,6 +444,7 @@ line-height: 1.5em;
     text-align: center;
     padding: 0;
   }
+  
 
   .paragraph p {
     font-size: 18px;
@@ -491,17 +459,28 @@ line-height: 1.5em;
   }
 
   .hero::before {
-    background-size: cover; /* fills mobile screens properly */
+    background-size: cover; 
     height: 100%;
     background-position: center top;
   }
 }
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(100px);
+  --duration: 1s;  
+}
+
+.scroll-animate.show {
+  animation: slidetop var(--duration) ease forwards;
+}
+
+
 @keyframes slidetop {
-   0%{
+  0% {
     transform: translateY(100px);
     opacity: 0;
-   }
-  100%{
+  }
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
