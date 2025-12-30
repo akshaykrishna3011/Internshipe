@@ -1,0 +1,48 @@
+.cover {
+  width: 310px;
+  height: 390px;        
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+}
+
+.cover-img {
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;     
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-img img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;   
+}
+.cover h3 {
+    padding: 10px 20px;
+}
+.cover p{
+    padding: 0 20px 10px;
+    font-weight: bold;
+}
+.button {
+  padding: 10px 20px;
+   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button button {
+  padding: 10px;
+  background-color: yellow;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background-color: gold;
+}
