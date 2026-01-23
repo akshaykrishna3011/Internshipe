@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding-top: 10vh;
+  overflow: hidden;
+    background-image: url("/84770f_994ffe746a074d1f8a2ec9456a8bf1ff~mv2.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.heading h1 {
+   font-size: clamp(2rem, 5vw, 5.625rem);
+  color: #16163f;
+  width: 55%;
+  padding-left: 30px;
+  font-family: Madefor, "Helvetica Neue", Helvetica, Arial;
+  margin: 0;
+}
+
+.paragraph p {
+  font-size: 24px;
+  width: 34%;
+  padding-left: 32px;
+  color: #16163f;
+  margin: 0;
+}
+
+.button {
+  padding-left: 33px;
+  padding-top: 37px;
+}
+
+.button button {
+  background-color: #9e3ffd;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 36px;
+  transition: 0.2s;
+}
+
+.button button:hover {
+  transform: scale(1.05);
+}

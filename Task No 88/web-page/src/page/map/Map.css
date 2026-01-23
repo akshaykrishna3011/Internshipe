@@ -1,0 +1,6 @@
+.map-section iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  filter: grayscale(100%);
+}

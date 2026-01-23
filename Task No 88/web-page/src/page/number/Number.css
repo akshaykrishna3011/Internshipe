@@ -1,0 +1,61 @@
+.tree {
+  background-color: #16163f;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+.tree .container-fluid {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 90px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.th-heading h1 {
+  font-size: 36px;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}
+.number h1 {
+  font-size: 80px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+}
+.text p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1rem;
+}
+.dot {
+  color: #fff;
+  transition: 0.2s;
+  opacity: 0;
+}
+.cutome-col {
+  width: 200px;
+}
+/* .dot-col {
+  width: 0px;
+} */
+.dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 1;
+}
+
+.dot svg {
+  width: 8px;
+  height: 8px;
+  display: block;
+}

@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.from{
+  border: 1px solid black;
+  height:250px;
+
+}
+.name-secton{
+ 
+  gap: .5rem;
+  padding: 20px 10px;
+}
