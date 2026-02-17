@@ -1,0 +1,76 @@
+.them {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  position: relative;
+  background-color: gray;
+}
+
+
+.navbar a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.navbar-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+.navbar button {
+  margin-left: auto;
+}
+
+.light {
+  background-color: #eee;
+  color: #000;
+}
+
+.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+
+.home {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  min-height: 90vh;
+  width: 100%;
+   display: flex;
+  justify-content: center;  
+  align-items: center;   
+
+}
+
+.products {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.profile{
+  min-height: 90vh;
+  width: 100%;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
