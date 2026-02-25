@@ -5,7 +5,11 @@ const TodoFrom = ({ onAdd, editId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!text.trim()) return;
+
+    if (!text.trim()) {
+      alert("Todo is required");  
+      return;
+    }
 
     onAdd(text);
     setText("");
@@ -20,6 +24,7 @@ const TodoFrom = ({ onAdd, editId }) => {
           onChange={(e) => setText(e.target.value)}
           placeholder="What would you like to do?"
         />
+
         <button type="submit">
           {editId !== null ? "Update" : "Add"}
         </button>

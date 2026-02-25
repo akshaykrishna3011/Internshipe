@@ -4,25 +4,24 @@ import TodoFrom from "./TodoFrom";
 const Todo = () => {
   const [todos, setTodos] = useState([]);
   const [editId, setEditId] = useState(null);
-  const [nextId, setNextId] = useState(1); // start from 1
-
+  const [nextId, setNextId] = useState(1); 
   const handleAdd = (text) => {
     if (editId !== null) {
-      // Update
+     
       const updatedTodos = todos.map((todo) =>
         todo.id === editId ? { ...todo, text } : todo
       );
       setTodos(updatedTodos);
       setEditId(null);
     } else {
-      // Add
+      
       const newTodo = {
         id: nextId,
         text,
       };
 
       setTodos([...todos, newTodo]);
-      setNextId(nextId + 1); // increase id
+      setNextId(nextId + 1);
     }
   };
 
@@ -54,7 +53,7 @@ const Todo = () => {
         <tbody>
           {todos.map((todo, index) => (
             <tr key={todo.id}>
-              <td>{index + 1}</td> {/* Display serial number */}
+              <td>{index + 1}</td> 
               <td>{todo.text}</td>
               <td>
                 <button onClick={() => handleEdit(todo)}>Edit</button>
