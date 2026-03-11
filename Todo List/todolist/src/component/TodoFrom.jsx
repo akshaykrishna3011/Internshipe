@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 
-const TodoFrom = ({ onAdd, editId }) => {
+const TodoFrom = ({ onAdd, editId , editText}) => {
   const [text, setText] = useState("");
-
+  const [error, setError] = useState("");
+  
+   useEffect(() => {
+    if (editId !== null) {
+      setText(editText);
+    }
+  }, [editId, editText]);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!text.trim()) {
-      alert("Todo is required");  
+      setError("Todo is required");
       return;
     }
 
+    setError("");
     onAdd(text);
     setText("");
   };
@@ -21,9 +29,14 @@ const TodoFrom = ({ onAdd, editId }) => {
         <input
           type="text"
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => {
+            setText(e.target.value);
+            if (error) setError("");
+          }}
           placeholder="What would you like to do?"
         />
+
+        {error && <p className="error">{error}</p>}
 
         <button type="submit">
           {editId !== null ? "Update" : "Add"}

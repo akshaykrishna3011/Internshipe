@@ -10,7 +10,7 @@ body {
 }
 
 .todo {
-  width: 40%;
+  width: 80%;
   background-color: #f6f7ff;
   position: absolute;
   left: 50%;
@@ -37,7 +37,7 @@ body {
 }
 
 .form {
-  width: 90%;
+  width: 80%;
   background-color: white;
   margin: -50px auto 20px auto;
   border-radius: 30px;
@@ -49,11 +49,14 @@ body {
 
 .formfilde {
   width: 70%;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 .formfilde input {
-  width: 100%;
+  width: 55%;
   border: none;
   border-bottom: 2px solid #535f94;
   outline: none;
@@ -62,7 +65,8 @@ body {
 }
 
 .formfilde button {
-  margin-top: 15px;
+  width: 120px;
+  margin-top: 10px;
   padding: 8px 25px;
   border: none;
   background-color: #535f94;
@@ -74,6 +78,47 @@ body {
 
 .formfilde button:hover {
   background-color: #404a78;
+}
+
+.formfilde select {
+  width: 25%;
+  border: none;
+  border-bottom: 2px solid #535f94;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  background-color: white;
+}
+.formfilde input:focus,
+.formfilde select:focus {
+  border-bottom: 2px solid #404a78;
+}
+
+.filter-container {
+  width: 90%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter-select {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #535f94;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+.filter-select:hover {
+  border-color: #404a78;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 table {
@@ -116,8 +161,34 @@ td button:last-child {
 td button:hover {
   opacity: 0.8;
 }
+
 .error {
   color: red;
   font-size: 14px;
   margin-top: 5px;
+}
+
+.spinner-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #4caf50;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

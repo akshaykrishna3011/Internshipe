@@ -3,7 +3,7 @@ import { useMemo } from "react";
 const products = [
   { id: 1, name: "Laptop", price: 50000 },
   { id: 2, name: "Phone", price: 30000 },
-  { id: 3, name: "Headset", price: 2000 },
+  { id: 3, name: "Headphones", price: 20000 },
 ];
 
 function Products() {

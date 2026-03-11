@@ -8,24 +8,42 @@ import Products from "./Products";
 import Profile from "./Profile";
 
 function AppContent() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("token") ? true : false
+  );
   const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const login = useCallback(() => {
-    setIsLoggedIn(true);
+  const correctName = "Admin";
+  const correctPassword = "1234";
+
+  const login = useCallback((name, password) => {
+    if (name === correctName && password === correctPassword) {
+      localStorage.setItem("token", "loggedin");
+      setIsLoggedIn(true);
+    } else {
+      alert("Invalid username or password")
+      setIsLoggedIn(false)
+    }
   }, []);
+  const logout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+  };
 
   return (
     <div className={theme}>
       <nav className="navbar">
         <div className="navbar-links">
-        <Link to="/">Home</Link> 
-        <Link to="/products">Products</Link> 
-        <Link to="/profile">Profile</Link>
+          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/profile">Profile</Link>
         </div>
-        <button onClick={toggleTheme}>Toggle Theme</button>
+        <div className="navbar-buttons">
+          <button onClick={toggleTheme}>Toggle Theme</button>
+          <button onClick={logout}>Logout</button>
+        </div>
       </nav>
-     
+
 
       {!isLoggedIn ? (
         <Login onLogin={login} />

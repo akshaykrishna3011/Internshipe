@@ -4,31 +4,26 @@
 }
 
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
-  padding: 15px 25px;
-  position: relative;
+  padding: 15px 40px;
   background-color: gray;
+  color: white;
 }
-
-
-.navbar a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: inherit;
-}
-
 
 .navbar-links {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 16px;
+  gap: 25px;
 }
 
-.navbar button {
+.navbar-buttons {
   margin-left: auto;
+  display: flex;
+  gap: 15px;
 }
 
 .light {
@@ -52,25 +47,43 @@
 
 .login {
   min-height: 90vh;
-  width: 100%;
-   display: flex;
-  justify-content: center;  
-  align-items: center;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.login div {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.login input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.login button {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
 }
 
 .products {
   min-height: 90vh;
   width: 100%;
   display: flex;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 
 }
-.profile{
+
+.profile {
   min-height: 90vh;
   width: 100%;
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }

@@ -5,6 +5,7 @@ const Todo = () => {
   const [todos, setTodos] = useState([]);
   const [editId, setEditId] = useState(null);
   const [nextId, setNextId] = useState(1); 
+  const [editText, setEditText] = useState("");
   const handleAdd = (text) => {
     if (editId !== null) {
      
@@ -31,6 +32,7 @@ const Todo = () => {
 
   const handleEdit = (todo) => {
     setEditId(todo.id);
+     setEditText(todo.text);
   };
 
   return (
@@ -39,7 +41,7 @@ const Todo = () => {
         <h1>TODO List</h1>
       </div>
 
-      <TodoFrom onAdd={handleAdd} editId={editId} />
+      <TodoFrom onAdd={handleAdd} editId={editId}  editText={editText}/>
 
       <table>
         <thead>
